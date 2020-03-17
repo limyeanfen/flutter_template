@@ -30,7 +30,7 @@ platform :android do
 
     if !appsettings_local_path.nil?
       puts "appsettings.local.json will be replaced by #{appsettings_local_path}"
-      sh "cp #{appsettings_local_path} #{root_directory}" 
+      sh "cp #{appsettings_local_path} #{root_directory}/appsettings.local.json" 
     end
     
     sh "cd #{root_directory} && flutter build apk -t lib/program.dart --release --build-name=#{build_name} --build-number=#{build_number}"
