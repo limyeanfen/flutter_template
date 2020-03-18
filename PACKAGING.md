@@ -4,6 +4,7 @@
 This documentation will describe the approach to build and package flutter mobile application for both iOS and Android.
 
 ## Prerequisite
+- Git Bash
 - Dart
 - Flutter
 - Ruby (Fastlane)
