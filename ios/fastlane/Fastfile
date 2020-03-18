@@ -1,0 +1,62 @@
+default_platform(:ios)
+
+platform :ios do
+  
+  root_directory = ""
+  build_name = "0.0.1"
+  build_number = 1
+  release_file_path = ""
+  ipa_output_path = ""
+  appsettings_local_path = nil
+  ios_dist_directory = ""
+
+  temp_app_name = 'app.ipa'
+  runner_workspace = './Runner.xcworkspace'
+  runner_project = './Runner.xcodeproj'
+  ios_export_method = 'development'
+
+  before_all do |lane, options|
+    root_directory = File.expand_path("../..", Dir.pwd)
+    build_name = ENV["BUILD_NAME"]
+    build_number = ENV["BUILD_NUMBER"]
+    ipa_output_path = ENV["IPA_OUTPUT_PATH"]
+    appsettings_local_path = ENV["APPSETTINGS_LOCAL_PATH"]
+    ios_dist_directory = File.expand_path("../../dist", Dir.pwd)
+  end
+
+  desc "Clean"
+  lane :clean do
+    sh "cd #{root_directory} && flutter clean"
+  end
+
+  desc "Build"
+  lane :build do
+    puts "Version: #{build_name}+#{build_number}"
+    puts "IPA Output Path: #{ipa_output_path}"
+
+    if !appsettings_local_path.nil?
+      puts "appsettings.local.json will be replaced by #{appsettings_local_path}"
+      sh "cp #{appsettings_local_path} #{root_directory}/appsettings.local.json" 
+    end
+    
+    sh "cd #{root_directory} && flutter build ios -t lib/program.dart --release --build-name=#{build_name} --build-number=#{build_number}"
+    build_ios_app(
+      workspace: runner_workspace,
+      output_directory: ios_dist_directory,
+      output_name: temp_app_name,
+      include_bitcode: true,
+      include_symbols: true,
+      export_options: {
+        method: ios_export_method
+      }
+    )
+    sh "cp #{ios_dist_directory}/#{temp_app_name} #{ipa_output_path}" 
+    sh "rm -r #{ios_dist_directory}"
+  end
+
+  desc "Deploy to App Store"
+  lane :deploy do
+    # TODO: Deploy to App Store
+  end
+
+end
