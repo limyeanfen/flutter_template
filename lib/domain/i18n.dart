@@ -36,8 +36,8 @@ class I18n implements WidgetsLocalizations {
   String get mainScreenTitle => "Flutter Demo";
   /// "Check Record Summary"
   String get mainScreenCheckRecordSummary => "Check Record Summary";
-  /// "Record Summary 123"
-  String get recordSummaryScreenTitle => "Record Summary 123";
+  /// "Record Summary"
+  String get recordSummaryScreenTitle => "Record Summary";
 }
 
 class _I18n_en_US extends I18n {
