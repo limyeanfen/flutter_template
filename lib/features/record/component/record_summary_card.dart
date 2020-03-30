@@ -10,8 +10,12 @@ class RecordSummaryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: InkWell(
-        onTap: null,
-        child: Text(record.id),
+        onTap: () {},
+        child: Container(
+          height: 50,
+          alignment: Alignment.center,
+          child: Text(record.id),
+        ),
       ),
     );
   }
