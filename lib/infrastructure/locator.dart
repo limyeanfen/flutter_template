@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_template/infrastructure/repository/static_record_repository.dart';
+import 'package:flutter_template/infrastructure/viewmodel/record/record_summary_screen_view_model.dart';
 import 'package:flutter_template/model/app_settings.dart';
 import 'package:flutter_template/model/record.dart';
 import 'package:flutter_template/model/record_repository.dart';
@@ -12,8 +13,12 @@ GetIt locator = GetIt.I;
 Future<void> setupLocator(AppSettings appSettings) async {
   List<Record> staticRecords = await _loadRecord();
 
-  locator.registerSingleton<RecordRepository>(
-    StaticRecordRepository(staticRecords),
+  RecordRepository recordRepository = StaticRecordRepository(staticRecords);
+
+  locator.registerFactory(
+    () => RecordSummaryScreenViewModel(
+      recordRepository: recordRepository,
+    ),
   );
 }
 
