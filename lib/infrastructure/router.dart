@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/features/main/home.dart';
+import 'package:flutter_template/features/main/home_screen.dart';
 
 class Router {
+  static const String initialScreenRoute = '/';
   static const String homeScreenRoute = '/home';
-  static const String summaryScreenToute = '/summary';
+  static const String summaryScreenRoute = '/summary';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case homeScreenRoute:
+      case initialScreenRoute:
         return MaterialPageRoute(
-          builder: (BuildContext context) => Home(),
+          builder: (BuildContext context) => HomeScreen(),
         );
       default:
         return MaterialPageRoute(
