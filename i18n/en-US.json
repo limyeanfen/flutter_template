@@ -1,0 +1,9 @@
+{
+    "mainScreen": {
+        "title": "Flutter Demo",
+        "checkRecordSummary": "Check Record Summary"
+    },
+    "recordSummaryScreen": {
+        "title": "Record Summary 123"
+    }
+}
