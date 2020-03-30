@@ -6,13 +6,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fusionex'),
+        title: Text('Flutter Demo'),
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('Check User Summary'),
+          child: Text('Check Record Summary'),
           onPressed: () =>
-              Navigator.of(context).pushNamed(Router.summaryScreenRoute),
+              Navigator.of(context).pushNamed(Router.recordSummaryScreenRoute),
         ),
       ),
     );

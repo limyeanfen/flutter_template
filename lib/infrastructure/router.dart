@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/features/main/home_screen.dart';
+import 'package:flutter_template/features/record/record_summary_screen.dart';
 
 class Router {
   static const String initialScreenRoute = '/';
   static const String homeScreenRoute = '/home';
-  static const String summaryScreenRoute = '/summary';
+  static const String recordSummaryScreenRoute = '/recordSummary';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -12,6 +13,10 @@ class Router {
       case initialScreenRoute:
         return MaterialPageRoute(
           builder: (BuildContext context) => HomeScreen(),
+        );
+      case recordSummaryScreenRoute:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => RecordSummaryScreen(),
         );
       default:
         return MaterialPageRoute(
