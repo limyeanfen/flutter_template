@@ -1,4 +1,4 @@
-import 'package:flutter_template/domain/record.dart';
+import 'package:flutter_template/model/record.dart';
 import 'package:flutter_template/infrastructure/repository/base_repository.dart';
 
 class RecordRepository extends BaseRepository {

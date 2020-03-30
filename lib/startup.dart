@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/domain/app_settings.dart';
+import 'package:flutter_template/model/app_settings.dart';
 import 'package:flutter_template/features/app.dart';
 import 'package:flutter_template/infrastructure/locator.dart';
 
