@@ -7,6 +7,5 @@ const String APP_SETTING_JSON = 'appsettings.json';
 const String APP_SETTING_LOCAL_JSON = 'appsettings.local.json';
 
 void startup(AppSettings appSettings) {
-  setupLocator(appSettings);
-  runApp(App());
+  setupLocator(appSettings).then((_) => runApp(App()));
 }
