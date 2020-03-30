@@ -6,8 +6,8 @@ import 'package:http/http.dart' as http;
 const PAGE_SIZE_QUERY_PARAM_KEY = 'pageSize';
 const PAGE_QUERY_PARAM_KEY = 'page';
 
-class BaseRepository {
-  BaseRepository(this.baseUrl) : httpClient = http.Client();
+class HttpRepository {
+  HttpRepository(this.baseUrl) : httpClient = http.Client();
 
   final String baseUrl;
   final http.Client httpClient;
