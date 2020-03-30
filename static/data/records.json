@@ -1,0 +1,72 @@
+[
+    {
+        "id": "fefdfcdc-5eda-4fa4-894e-18d16ae8fc4f",
+        "first_name": "Stavro",
+        "last_name": "Gomery",
+        "email": "sgomery0@desdev.cn",
+        "gender": "Male"
+    },
+    {
+        "id": "3b13a417-15d1-4538-925e-ea71f9aab21c",
+        "first_name": "Rebeca",
+        "last_name": "Knott",
+        "email": "rknott1@google.it",
+        "gender": "Female"
+    },
+    {
+        "id": "df54292d-140f-40e8-9224-2dc1446bb876",
+        "first_name": "Dallon",
+        "last_name": "Mussotti",
+        "email": "dmussotti2@reddit.com",
+        "gender": "Male"
+    },
+    {
+        "id": "e49163cd-478b-4edf-b166-d5c3b7eb1b92",
+        "first_name": "Dreddy",
+        "last_name": "Mulholland",
+        "email": "dmulholland3@weather.com",
+        "gender": "Female"
+    },
+    {
+        "id": "327c6fff-7940-46cd-9a1f-928e07093c13",
+        "first_name": "Rosalynd",
+        "last_name": "Shillam",
+        "email": "rshillam4@dyndns.org",
+        "gender": "Female"
+    },
+    {
+        "id": "9920cb54-4934-4bec-8ce8-d186f0524e0d",
+        "first_name": "Stanfield",
+        "last_name": "Barritt",
+        "email": "sbarritt5@marriott.com",
+        "gender": "Male"
+    },
+    {
+        "id": "a7c3bebf-a201-433c-9b45-d7f6e0e12276",
+        "first_name": "Jules",
+        "last_name": "Lympany",
+        "email": "jlympany6@biblegateway.com",
+        "gender": "Male"
+    },
+    {
+        "id": "1266c14a-2d5f-45f6-aa34-f994ab062cee",
+        "first_name": "Porter",
+        "last_name": "Walkinshaw",
+        "email": "pwalkinshaw7@google.nl",
+        "gender": "Male"
+    },
+    {
+        "id": "6ecae6ea-a08d-4651-920f-8d11eb95730f",
+        "first_name": "Jerry",
+        "last_name": "Muggeridge",
+        "email": "jmuggeridge8@cnet.com",
+        "gender": "Male"
+    },
+    {
+        "id": "67819c99-fbab-4399-b310-66d50e064f86",
+        "first_name": "Ilene",
+        "last_name": "Andress",
+        "email": "iandress9@boston.com",
+        "gender": "Female"
+    }
+]

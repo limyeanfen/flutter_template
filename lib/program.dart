@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:flutter_template/domain/app_settings.dart';
+import 'package:flutter_template/model/app_settings.dart';
 import 'package:flutter_template/seedwork/map_util.dart';
 import 'package:flutter_template/startup.dart';
 
